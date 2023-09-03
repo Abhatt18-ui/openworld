@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>body {
+  margin: 0;
+  padding: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+  border: 2px solid gray;
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.content {
+  text-align: justify;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 40px;
+  transition: all .2s;
+}
+
+.fa-sun {
+  color: orange;
+  text-shadow: 0 0 20px orange;
+  opacity: 1;
+  font-size: 25px;
+  transition: transform .3s, opacity .3s;
+  transform: translateX(25px);
+}
+
+.fa-moon {
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  opacity: 0;
+  font-size: 25px;
+  transition: transform .3s, opacity .3s;
+  transform: translateX(0);
+}
+
+#switch-button:checked ~ label > .fa-sun {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+#switch-button:checked ~ label > .fa-moon {
+  opacity: 1;
+  transform: translateX(-25px);
+}
+
+#switch-button:checked ~ .content {
+  color: #fff;
+  background: #000;
+}
+
+</style>
+   </head>
+   <body>
+    <input type="checkbox" id="switch-button">
+ <label for="switch-button">
+   <i class="fas fa-sun"></i>
+   <i class="fas fa-moon"></i>
+ </label>
+ 
+    <script src="./index.e82f28a0.js" defer=""></script>
+    
+</body>
+</html>
